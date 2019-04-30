@@ -90,4 +90,10 @@ public class BeatBoxFragment extends Fragment {
             return mSoundList.size();
         }
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mBeatBox.release();
+    }
 }
